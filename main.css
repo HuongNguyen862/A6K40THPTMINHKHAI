@@ -1,0 +1,54 @@
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #f8f8f8;
+  padding: 10px 20px;
+  position: relative;
+}
+
+.menu {
+  display: flex;
+  list-style: none;
+  gap: 20px;
+  transition: all 0.3s ease;
+}
+
+.menu-arrow {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+
+@media (max-width: 768px) {
+  .menu-arrow {
+    display: block; 
+  }
+
+  .menu {
+    display: none; 
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-color: #eee;
+    padding: 10px 0;
+    z-index: 1000; 
+  }
+
+  .menu.active {
+    display: flex;
+  }
+}
+
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  margin-top: 20px;
+}
