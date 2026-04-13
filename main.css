@@ -1,8 +1,14 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 .navbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: #f8f8f8;
+  background-color: #cfcfcf;
   padding: 10px 20px;
   position: relative;
 }
@@ -11,7 +17,7 @@
   display: flex;
   list-style: none;
   gap: 20px;
-  transition: all 0.3s ease;
+  transition: all  0.3s ease;
 }
 
 .menu-arrow {
@@ -35,6 +41,8 @@
     top: 100%;
     left: 0;
     width: 100%;
+    right: 0; /* Sử dụng right: 0 thay vì width: 100% để đảm bảo tràn đều */
+    width: 100%; 
     background-color: #eee;
     padding: 10px 0;
     z-index: 1000; 
@@ -48,7 +56,23 @@
 ol {
   list-style-type: none;
   padding-left: 20px;
-  max-height: 500px;
+  max-height: 150px;
   overflow: scroll;
   transition: max-height 0.3s ease;
+}
+.greeting {
+  padding: 10px;
+  margin: 5px;
+  text-align: center;
+}
+
+.in4teacher {
+  padding: 5px 5px 5px 5px;
+}
+.subject {
+  display : none;
+}
+.in4teacher:hover .subject {
+  display: block;
+  transition: display 0.3s ease;
 }
